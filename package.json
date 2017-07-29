@@ -1,0 +1,14 @@
+{
+  "name": "textgame.js",
+  "version": "0.0.1",
+  "description": "An engine for efficiently building text games.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tc-imba/textgame.js"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
