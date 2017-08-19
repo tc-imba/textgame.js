@@ -1,4 +1,4 @@
-const Event = require('./event');
+const Event = require('./lib/event');
 
 class EventEngine {
 
@@ -11,7 +11,6 @@ class EventEngine {
         this._events.push(event);
 
     }
-
 
 }
 
