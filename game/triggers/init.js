@@ -1,6 +1,6 @@
 const game = require('../../textgame');
 
-module.exports = new game.Trigger({
+module.exports = {
     name: "init",
     event: {
         type: "init"
@@ -9,4 +9,4 @@ module.exports = new game.Trigger({
     action: async () => {
         await game.view.dialog('旁白', 'xxx');
     }
-});
+};
