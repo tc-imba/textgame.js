@@ -1,5 +1,12 @@
 const game = require('../textgame');
-const init = require('./triggers/init');
+
+game.trigger.create(require('./triggers/init'));
+console.log(game.trigger._initEvent);
+
+game.trigger.init();
+
+
+/*const init = require('./triggers/init');
 
 const role = new game.Role({
     name: "aaa",
@@ -10,5 +17,5 @@ console.log(role.getAttr('111'));
 
 setTimeout(async function () {
     await init.action();
-}, 0);
+}, 0);*/
 

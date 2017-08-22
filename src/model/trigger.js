@@ -32,8 +32,9 @@ class TriggerModel {
 
     }
 
-    get(name) {
-        return this._triggerNameMap[name] || null;
+    get(value, type = 'name') {
+        if (type === 'id') return this._triggerIdMap[value] || null;
+        if (type === 'name') return this._triggerNameMap[value] || null;
     }
 
     /** Init Events */
@@ -84,7 +85,8 @@ class TriggerModel {
 
     init() {
         _.each(this._initEvent, (value, key) => {
-
+            let trigger = this.get(value.triggerId, 'id');
+            trigger.action();
         });
     }
 

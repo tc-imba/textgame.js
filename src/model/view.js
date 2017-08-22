@@ -4,6 +4,10 @@ class View {
 
     }
 
+    initFrame(element, height, width) {
+
+    }
+
     async dialog(role, text = '') {
         console.log(role, text);
     }

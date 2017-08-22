@@ -1,5 +1,5 @@
 const Player = require('./player');
-const View = require('./view');
+const View = require('./model/view');
 
 const TriggerModel = require('./model/trigger');
 const UtilsModel = require('./model/utils');
