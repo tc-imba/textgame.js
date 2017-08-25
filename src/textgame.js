@@ -1,3 +1,5 @@
+//import Player from './player'
+
 const Player = require('./player');
 const View = require('./model/view');
 

@@ -1,3 +1,6 @@
+
+
+
 const game = require('../textgame');
 
 game.trigger.create(require('./triggers/init'));
