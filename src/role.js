@@ -1,6 +1,6 @@
 const _ = require('underscore');
 
-class Role {
+export default class Role {
 
     constructor(options) {
         _.extend(this, options);
@@ -19,4 +19,4 @@ class Role {
 
 }
 
-module.exports = Role;
+// module.exports = Role;

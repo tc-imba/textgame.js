@@ -1,6 +1,6 @@
 const _ = require('underscore');
 
-class Trigger {
+export default class Trigger {
 
     constructor(id, options) {
         _.extend(this, options);
@@ -11,4 +11,4 @@ class Trigger {
 
 }
 
-module.exports = Trigger;
+//module.exports = Trigger;

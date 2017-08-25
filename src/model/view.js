@@ -1,15 +1,18 @@
-
-
 import React from 'react';
+import ReactDOM from 'react-dom';
+import MainFrame from '../view/mainframe';
 
-class View {
+export default class View {
 
     constructor() {
 
     }
 
     initFrame(element, height, width) {
-
+        ReactDOM.render(
+            <MainFrame />,
+            document.getElementById(element)
+        );
     }
 
     async dialog(role, text = '') {
@@ -17,4 +20,4 @@ class View {
     }
 }
 
-module.exports = View;
+// module.exports = View;

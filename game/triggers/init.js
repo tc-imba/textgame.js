@@ -1,4 +1,7 @@
-const game = require('../../textgame');
+//const game = require('../../textgame');
+
+import game from '../../textgame';
+
 
 module.exports = {
     name: "init",

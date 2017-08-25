@@ -1,8 +1,11 @@
-const _ = require('underscore');
-const game = require('../../textgame');
-const Trigger = require('../lib/trigger');
+//const _ = require('underscore');
+//const game = require('../../textgame');
 
-class TriggerModel {
+import game from '../textgame';
+import _ from 'underscore';
+import Trigger from '../lib/trigger';
+
+export default class TriggerModel {
 
     constructor() {
         this._triggerNum = 0;
@@ -92,4 +95,4 @@ class TriggerModel {
 
 }
 
-module.exports = TriggerModel;
+//module.exports = TriggerModel;

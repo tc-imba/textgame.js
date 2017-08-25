@@ -1,7 +1,7 @@
 
+import game from '../textgame';
 
-
-const game = require('../textgame');
+//const game = require('../textgame');
 
 game.trigger.create(require('./triggers/init'));
 console.log(game.trigger._initEvent);

@@ -1,6 +1,8 @@
-const game = require('../../textgame');
+//const game = require('../../textgame');
 
-class UtilsModel {
+import game from '../textgame';
+
+export default class UtilsModel {
     constructor() {
 
     }
@@ -10,4 +12,4 @@ class UtilsModel {
     }
 }
 
-module.exports = UtilsModel;
+//module.exports = UtilsModel;

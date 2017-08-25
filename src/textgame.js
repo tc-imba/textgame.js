@@ -1,10 +1,7 @@
-//import Player from './player'
-
-const Player = require('./player');
-const View = require('./model/view');
-
-const TriggerModel = require('./model/trigger');
-const UtilsModel = require('./model/utils');
+import Player from './player'
+import View from './model/view'
+import TriggerModel from './model/trigger'
+import UtilsModel from './model/utils'
 
 class Textgame {
 
@@ -23,4 +20,7 @@ class Textgame {
 
 }
 
-module.exports = new Textgame();
+const game = new Textgame();
+export default game;
+
+//module.exports = new Textgame();
