@@ -1,5 +1,4 @@
-
-import game from '../textgame';
+import game from '../src/textgame';
 
 //const game = require('../textgame');
 
