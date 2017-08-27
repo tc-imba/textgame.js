@@ -6,6 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let config = {
     entry: {
         'main': path.resolve(__dirname, '../../game/game.js'),
+        'textgame': path.resolve(__dirname, '../../src/textgame.js'),
     },
     output: {
         path: path.resolve(__dirname, '../../build'),
