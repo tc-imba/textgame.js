@@ -2,6 +2,9 @@ import game from '../src/textgame';
 
 //const game = require('../textgame');
 
+
+game.view.initFrame('mainframe', 800, 600);
+
 game.trigger.create(require('./triggers/init'));
 console.log(game.trigger._initEvent);
 

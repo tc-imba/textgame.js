@@ -1,3 +1,4 @@
+import regeneratorRuntime from "regenerator-runtime";
 import Player from './player'
 import View from './model/view'
 import TriggerModel from './model/trigger'

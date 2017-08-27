@@ -1,17 +1,11 @@
 {
   "presets": [
-    "env",
-    "react"
-  ],
-  "plugins": [
-    [
-      "transform-runtime",
-      {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true,
-        "moduleName": "babel-runtime"
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
       }
-    ]
+    }],
+    "react",
+    "stage-2"
   ]
 }

@@ -18,7 +18,10 @@ let config = {
         new webpack.DllReferencePlugin({
             context: __dirname,
             manifest: path.resolve(__dirname, '../../build/vendor.stable.manifest.json'),
-        })
+        }),
+        new webpack.ProvidePlugin({
+            regeneratorRuntime: 'regenerator-runtime'
+        }),
     ]
 };
 

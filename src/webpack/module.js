@@ -3,7 +3,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     rules: [{
         test: /\.jsx?$/,
-        use: 'babel-loader'
+        exclude: /node_modules/,
+        use: 'babel-loader?cacheDirectory=true'
     }, {
         test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/,
         use: 'imports-loader?jQuery=jquery'

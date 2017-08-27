@@ -6,5 +6,6 @@ const vendors = [
     'jquery',
     'bootstrap-loader',
     'font-awesome-webpack',
+    'regenerator-runtime'
 ];
 module.exports = generator.generate('stable', vendors);
