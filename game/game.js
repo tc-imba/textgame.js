@@ -3,12 +3,18 @@ import game from '../src/textgame';
 //const game = require('../textgame');
 
 
-game.view.initFrame('mainframe', 800, 600);
+game.view.initFrame('mainframe');
 
 game.trigger.create(require('./triggers/init'));
 console.log(game.trigger._initEvent);
 
 game.trigger.init();
+/*setTimeout(() => {
+    game.view.setFrameStyle({
+        width: '1000px',
+        //border: null
+    })
+}, 500);*/
 
 
 /*const init = require('./triggers/init');

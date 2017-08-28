@@ -3,6 +3,7 @@ const generator = require('./generate');
 const vendors = [
     'react',
     'react-dom',
+    'underscore',
     'jquery',
     'bootstrap-loader',
     'font-awesome-webpack',
