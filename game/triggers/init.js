@@ -11,5 +11,7 @@ module.exports = {
     condition: true,
     action: async () => {
         await game.view.dialog('旁白', 'xxx');
+        await game.view.dialog('旁白', 'yyy');
+        await game.view.dialog('旁白', 'zzz');
     }
 };

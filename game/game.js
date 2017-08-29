@@ -6,9 +6,13 @@ import game from '../src/textgame';
 game.view.initFrame('mainframe');
 
 game.trigger.create(require('./triggers/init'));
-console.log(game.trigger._initEvent);
+// console.log(game.trigger._initEvent);
 
 game.trigger.init();
+
+
+
+
 /*setTimeout(() => {
     game.view.setFrameStyle({
         width: '1000px',

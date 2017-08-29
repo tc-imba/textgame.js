@@ -10,10 +10,65 @@
 .textgame-dialog-frame {
     border-top: 1px solid #E6E6FA;
     /*border-radius: 25px;*/
-    padding: 25px;
+    /*padding: 25px;*/
     width: 100%;
     height: 30%;
     position: absolute;
     bottom: 5%;
     /*margin: 0 auto;*/
+}
+
+.textgame-dialog-role {
+    border-bottom: 1px solid #E6E6FA;
+    padding: 0 25px;
+    width: 100%;
+    height: 25%;
+}
+
+.textgame-dialog-content {
+    padding: 15px 25px;
+    width: 100%;
+}
+
+.textgame-box-align-center {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.textgame-box-align-center-h {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+}
+
+.textgame-box-align-center-v {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+}
+
+.textgame-box-align-left {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: start;
+}
+
+.textgame-box-align-right {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: end;
+}
+
+.textgame-box-align-up {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: start;
+}
+
+.textgame-box-align-bottom {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: end;
 }
