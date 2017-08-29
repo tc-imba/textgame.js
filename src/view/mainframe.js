@@ -1,6 +1,7 @@
 import _ from 'underscore';
 import React from 'react';
 import DialogFrame from './dialogframe';
+import ChoiceFrame from './choiceframe';
 import game from '../textgame';
 import './frame.css';
 
@@ -9,7 +10,7 @@ export default class MainFrame extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            status: "dialog",
+            dialog: true,
         };
         this.onClick = this.onClick.bind(this);
     }
@@ -21,17 +22,18 @@ export default class MainFrame extends React.Component {
     render() {
         return (
             <div className="textgame-main-frame" style={{...this.state.style}} onClick={this.onClick}>
-                mainframe begin
-                <DialogFrame style={{}} parent={this}/>
-                main frame end
+                <ChoiceFrame parent={this} display={this.state.choice}/>
+                <DialogFrame parent={this} display={this.state.dialog}/>
             </div>
         );
     }
 
+
     onClick(e) {
-        if (this.state.status === "dialog") {
+        // console.log(this.state.dialog);
+        if (this.state.dialog) {
             game.view.dialogViewed = true;
-            console.log('onClick');
+            // console.log('onClick');
         }
     }
 }

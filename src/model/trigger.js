@@ -4,6 +4,8 @@
 import game from '../textgame';
 import _ from 'underscore';
 import Trigger from '../lib/trigger';
+import async from 'neo-async';
+import pify from 'pify';
 
 export default class TriggerModel {
 
@@ -86,12 +88,21 @@ export default class TriggerModel {
     }
 
 
-    init() {
-        _.each(this._initEvent, (value, key) => {
-            let trigger = this.get(value.triggerId, 'id');
-            trigger.action();
-        });
+    async init() {
+        await pify(async.each)(
+            this._initEvent,
+            async (value) => {
+                let trigger = this.get(value.triggerId, 'id');
+                await this.run(trigger);
+            }
+        );
     }
+
+    async run(trigger) {
+        await trigger.action();
+        game.view.reset();
+    }
+
 
 }
 

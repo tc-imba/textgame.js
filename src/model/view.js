@@ -3,8 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MainFrame from '../view/mainframe';
 import game from '../textgame';
-import async from 'neo-async';
-import pify from 'pify';
+
 
 export default class View {
 
@@ -29,6 +28,10 @@ export default class View {
     async dialog(role, text = '') {
         // console.log(this.mainFrame);
         // console.log(this.mainFrame.dialogFrame);
+        let state = this.getResetState();
+        state.dialog = true;
+        this.mainFrame.setState(state);
+
         this.mainFrame.dialogFrame.setState({
             roleName: role,
             content: text
@@ -37,6 +40,34 @@ export default class View {
         await game.utils.delayUntil(() => this.dialogViewed);
         console.log(role, text);
     }
+
+    async choice(text, arr) {
+        let state = this.getResetState();
+        state.choice = true;
+        this.mainFrame.setState(state);
+
+        this.mainFrame.choiceFrame.setState({
+            content: text
+        });
+
+        this.choiceSelected = -1;
+        await game.utils.delayUntil(() => this.choiceSelected >= 0);
+
+        console.log(text, arr);
+    }
+
+    getResetState() {
+        return {
+            dialog: false,
+            choice: false
+        };
+    }
+
+    reset() {
+        this.mainFrame.setState(this.getResetState());
+        console.log('reset');
+    }
+
 }
 
 // module.exports = View;
